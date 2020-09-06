@@ -41,21 +41,20 @@ class HelloController{
     }
 }
 
-
 @Entity
 class Greeting{
     @Id
     @GenerateValue
     private Long id;
+
     @Column
     private String message;
 
-    public void setId(Long id) {
-        this.id = id;
+    public Greeting(){
     }
 
-    public Greeting(){
-
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Greeting(String message){
