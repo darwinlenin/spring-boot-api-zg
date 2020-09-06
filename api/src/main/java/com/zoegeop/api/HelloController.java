@@ -2,6 +2,8 @@ package com.zoegeop.api;
 
 import com.zoegeop.api.GreetingRepository;
 import com.zoegeop.api.Greeting;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 public class HelloController{
