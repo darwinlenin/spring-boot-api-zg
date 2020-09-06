@@ -13,8 +13,20 @@ public class Greeting {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String text;
+
     @Transient
     private String textInSomeLanguage;
+    
+    @Column
+    private String message;
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
 
     public Greeting() {
         super();
