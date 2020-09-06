@@ -1,5 +1,8 @@
 package com.zoegeop.api;
 
+import com.zoegeop.api.GreetingRepository;
+import com.zoegeop.api.Greeting;
+
 @RestController
 public class HelloController{
     private final GreetingRepository greetingRepository;

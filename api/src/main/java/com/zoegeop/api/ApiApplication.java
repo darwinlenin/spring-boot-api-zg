@@ -1,5 +1,7 @@
 package com.zoegeop.api;
 
+import com.zoegeop.api.Greeting;
+import com.zoegeop.api.GreetingRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
