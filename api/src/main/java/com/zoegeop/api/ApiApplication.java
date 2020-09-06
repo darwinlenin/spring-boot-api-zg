@@ -70,4 +70,4 @@ class Greeting{
     }
 }
 
-interface GreetingRepository extends CrudRepository<Greeting,Long>(){}
+interface GreetingRepository extends CrudRepository<Greeting,Long>();
