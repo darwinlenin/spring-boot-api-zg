@@ -1,31 +1,33 @@
 package com.zoegeop.api;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Transient;
+
 @Entity
-public class Greeting{
+public class Greeting {
+
     @Id
-    @GenerateValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    private String text;
+    @Transient
+    private String textInSomeLanguage;
 
-    @Column
-    private String message;
+    public Greeting() {
+        super();
+    }
 
-    public Greeting(){
+    public Greeting(String text) {
+        super();
+        this.text = text;
+        this.textInSomeLanguage = getTextTranslationInSpecifiedLanguage(text);
     }
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Greeting(String message){
-        this.message = message;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
     }
 
     public Long getId(){
