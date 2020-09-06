@@ -23,7 +23,7 @@ public class ApiApplication {
 }
 
 @RestController
-class HelloController{
+public class HelloController{
     private final GreetingRepository greetingRepository;
 
     @GetMapping("/")
@@ -42,7 +42,7 @@ class HelloController{
 }
 
 @Entity
-class Greeting{
+public class Greeting{
     @Id
     @GenerateValue
     private Long id;
