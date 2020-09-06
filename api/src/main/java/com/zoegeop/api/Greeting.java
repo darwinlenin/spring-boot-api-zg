@@ -33,9 +33,9 @@ public class Greeting {
         super();
     }
 
-    public Greeting(String text) {
+    public Greeting(String message) {
         super();
-        this.text = text;
+        this.message = message;
     }
 
     public void setId(Long id) {
