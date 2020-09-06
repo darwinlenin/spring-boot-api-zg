@@ -23,7 +23,6 @@ public class Greeting {
     public Greeting(String text) {
         super();
         this.text = text;
-        this.textInSomeLanguage = getTextTranslationInSpecifiedLanguage(text);
     }
 
     public void setId(Long id) {
