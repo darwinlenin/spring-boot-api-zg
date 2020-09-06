@@ -1,0 +1,1 @@
+interface GreetingRepository extends CrudRepository<Greeting,Long>{}
