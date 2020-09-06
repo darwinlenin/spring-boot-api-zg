@@ -27,15 +27,14 @@ class HelloController{
     private final GreetingRepository greetingRepository;
 
     @GetMapping("/")
-    public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
+    String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
         return String.format("Hello %s!", name);
     }
 
     @GetMapping("/greetings")
-    public List<Greeting> greeting(){
+    Iterable<Greeting> greetings(){
         return greetingRepository.findAll();
     }
-
 
     HelloController(GreetingRepository greetingRepository){
         this.greetingRepository = greetingRepository;
